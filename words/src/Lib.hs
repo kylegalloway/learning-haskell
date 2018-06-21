@@ -1,10 +1,8 @@
 module Lib
-    ( someFunc
-    , someString
+    ( findWords
+    , grid
+    , languages
     ) where
 
-someFunc :: IO ()
-someFunc = putStrLn someString
-
-someString :: String
-someString = "someString"
+import Grid (findWords)
+import Consts (grid, languages)
