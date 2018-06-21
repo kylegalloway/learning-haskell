@@ -1,6 +1,8 @@
 module Main where
 
-import Lib
+import Lib (findWords, grid, languages, outputGrid)
 
 main :: IO ()
-main = putStrLn $ unlines $ findWords grid languages
+main = do
+    outputGrid grid
+    putStrLn $ unlines $ findWords grid languages

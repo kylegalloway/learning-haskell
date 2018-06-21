@@ -1,5 +1,3 @@
-module Types
-    ( Grid
-    ) where
+module Types (Grid) where
 
 type Grid = [String]

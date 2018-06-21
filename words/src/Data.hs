@@ -1,7 +1,4 @@
-module Consts
-    ( grid
-    , languages
-    ) where
+module Data (grid, languages) where
 
 grid = [ "__C________R___"
        , "__SI________U__"

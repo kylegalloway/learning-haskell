@@ -1,14 +1,17 @@
-module Grid
-    ( findWords
-    ) where
+module Grid ( diagonalize
+           , findWord
+           , findWords
+           , findWordInLine
+           , formatGrid
+           , getLines
+           , gridReverse
+           , outputGrid
+           , skew
+            ) where
 
 import Data.List (isInfixOf, transpose)
 import Data.Maybe (catMaybes)
-import Consts (grid)
 import Types (Grid)
-
-diagonalize :: Grid -> Grid
-diagonalize = transpose . skew
 
 findWord :: Grid -> String -> Maybe String
 findWord grid word =
@@ -21,11 +24,14 @@ findWords grid words =
     let foundWords = map (findWord grid) words
     in catMaybes foundWords
 
-findWordInLine :: String -> String -> Bool
-findWordInLine = isInfixOf
-
 formatGrid :: Grid -> String
 formatGrid = unlines
+
+outputGrid :: Grid -> IO ()
+outputGrid = putStrLn . formatGrid
+
+findWordInLine :: String -> String -> Bool
+findWordInLine = isInfixOf
 
 getLines :: Grid -> Grid
 getLines grid =
@@ -39,8 +45,8 @@ getLines grid =
 gridReverse :: Grid -> Grid
 gridReverse = map reverse
 
-outputGrid :: Grid -> IO ()
-outputGrid = putStrLn . formatGrid
+diagonalize :: Grid -> Grid
+diagonalize = transpose . skew
 
 skew :: Grid -> Grid
 skew [] = []

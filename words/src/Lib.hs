@@ -1,8 +1,4 @@
-module Lib
-    ( findWords
-    , grid
-    , languages
-    ) where
+module Lib (findWord, findWords, formatGrid, grid, languages, outputGrid) where
 
-import Grid (findWords)
-import Consts (grid, languages)
+import Grid (findWord, findWords, formatGrid, outputGrid)
+import Data (grid, languages)
