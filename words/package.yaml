@@ -21,6 +21,8 @@ description:         Please see the README on GitHub at <https://github.com/kyle
 
 dependencies:
 - base >= 4.7 && < 5
+- containers
+- random
 
 library:
   source-dirs: src
@@ -34,6 +36,7 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     - -dynamic
+    - -Wall
     dependencies:
     - words
 
@@ -45,6 +48,8 @@ tests:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    - -dynamic
+    - -Wall
     dependencies:
     - words
     - hspec

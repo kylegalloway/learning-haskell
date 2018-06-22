@@ -1,5 +1,6 @@
 module Data (grid, languages) where
 
+grid :: [String]
 grid = [ "__C________R___"
        , "__SI________U__"
        , "__HASKELL____B_"
@@ -14,6 +15,7 @@ grid = [ "__C________R___"
        , "________CN_____"
        ]
 
+languages :: [String]
 languages = [ "BASIC"
             , "COBOL"
             , "CSHARP"

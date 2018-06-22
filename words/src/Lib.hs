@@ -1,4 +1,19 @@
-module Lib (findWord, findWords, formatGrid, grid, languages, outputGrid) where
+module Lib ( completed
+           , fillInBlanks
+           , formatGame
+           , Game
+           , grid
+           , languages
+           , makeGame
+           , playGame
+           ) where
 
-import Grid (findWord, findWords, formatGrid, outputGrid)
-import Data (grid, languages)
+import LibImpl ( completed
+               , fillInBlanks
+               , formatGame
+               , Game
+               , grid
+               , languages
+               , makeGame
+               , playGame
+               )
